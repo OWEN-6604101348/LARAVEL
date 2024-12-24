@@ -1,5 +1,8 @@
 <?php
-
+use App\Http\Controllers\EmployeeController;
+use Illuminate\Http\Request;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\UserController;
 // นำเข้าคอนโทรลเลอร์ที่ใช้ในเส้นทางต่าง ๆ
 use App\Http\Controllers\ChirpController;
 use App\Http\Controllers\ProfileController;
@@ -10,6 +13,11 @@ use Illuminate\Support\Facades\Route;
 // นำเข้า Inertia สำหรับการเรนเดอร์หน้าเว็บ
 use Inertia\Inertia;
 
+Route::get('/employees', [EmployeeController::class, 'index']); 
+Route::get('/products/{id}', [ProductController::class, 'show'])->name('products.show');
+Route::get('/products', [ProductController::class, 'index'])->name('products.index');
+
+
 // เส้นทางหลักของเว็บไซต์ที่แสดงหน้าต้อนรับ
 Route::get('/', function () {
     return Inertia::render('Welcome', [
@@ -19,6 +27,7 @@ Route::get('/', function () {
         'phpVersion' => PHP_VERSION, // แสดงเวอร์ชันของ PHP
     ]);
 });
+
 
 // เส้นทางสำหรับแดชบอร์ดที่ต้องการการยืนยันตัวตนและอีเมล
 Route::get('/dashboard', function () {

@@ -30,10 +30,20 @@ export default function AuthenticatedLayout({ header, children }) {
                                 >
                                     Dashboard
                                 </NavLink>
-                                <NavLink href={route('chirps.index')} active={route().current('chirps.index')}>
+                                <NavLink
+                                    href={route('chirps.index')}
+                                    active={route().current('chirps.index')}
+                                >
                                     Chirps
                                 </NavLink>
+                                <NavLink
+                                    href={route('products.index')}
+                                    active={route().current('products.index')}
+                                >
+                                    Product
+                                </NavLink>
                             </div>
+
                         </div>
 
                         <div className="hidden sm:ms-6 sm:flex sm:items-center">
@@ -137,10 +147,20 @@ export default function AuthenticatedLayout({ header, children }) {
                         >
                             Dashboard
                         </ResponsiveNavLink>
-                        <ResponsiveNavLink href={route('chirps.index')} active={route().current('chirps.index')}>
+                        <ResponsiveNavLink
+                            href={route('chirps.index')}
+                            active={route().current('chirps.index')}
+                        >
                             Chirps
                         </ResponsiveNavLink>
+                        <ResponsiveNavLink
+                            href={route('products.index')}
+                            active={route().current('products.index')}
+                        >
+                            Product
+                        </ResponsiveNavLink>
                     </div>
+
 
                     <div className="border-t border-gray-200 pb-1 pt-4">
                         <div className="px-4">
