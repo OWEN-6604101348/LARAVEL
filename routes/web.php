@@ -14,7 +14,8 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
 Route::get('/employees', [EmployeeController::class, 'index']); 
-Route::get('/products/{id}', [ProductController::class, 'show'])->name('products.show');
+Route::get('/products/{id}', [ProductController::class, 'show'])->middleware('auth')->name('products.show');
+
 Route::get('/products', [ProductController::class, 'index'])->name('products.index');
 
 

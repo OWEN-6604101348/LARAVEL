@@ -3,7 +3,6 @@ import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 
 export default function Index({ products }) {
     return (
-        <AuthenticatedLayout>
             <div className="container mx-auto px-4 py-6">
                 <h1 className="text-3xl font-semibold text-center mb-8">รายการสินค้า</h1>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -35,6 +34,5 @@ export default function Index({ products }) {
                     ))}
                 </div>
             </div>
-        </AuthenticatedLayout>
     );
 }

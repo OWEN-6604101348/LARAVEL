@@ -4,7 +4,6 @@ import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 
 export default function Show({ product }) {
     return (
-        <AuthenticatedLayout>
             <div className="container mx-auto px-4 py-6">
                 <div className="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
                     {/* Header */}
@@ -38,6 +37,5 @@ export default function Show({ product }) {
                     </div>
                 </div>
             </div>
-        </AuthenticatedLayout>
     );
 }
